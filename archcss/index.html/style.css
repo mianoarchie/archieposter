@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a1a, #af036d);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Poster box */
+.Poster {
+    width: 320px;
+    padding: 40px 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(175, 3, 109, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow border effect */
+.Poster::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #ff0080, #7928ca, #ff0080);
+    border-radius: 25px;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+/* Title */
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4;
+
+    /* Gradient text */
+    background: linear-gradient(90deg, #ff0080, #7928ca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Quote */
+.quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+/* Author */
+.author {
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    letter-spacing: 3px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
